@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GD Portel</title>
+  <title>GD Portel - Oficial</title>
   <meta name="theme-color" content="#0b0d12" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -28,33 +28,19 @@
   <main>
     <section class="hero" id="inicio">
       <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-glow"></div>
       <div class="wrap hero-inner">
         <div class="hero-content">
-          <img src="assets/teams/gdportel.png" alt="GD Portel" class="hero-logo reveal" />
+          <div class="hero-logo-wrap reveal">
+            <img src="assets/teams/gdportel.png" alt="GD Portel" class="hero-logo" />
+          </div>
           <div class="hero-text">
-            <p class="eyebrow reveal" style="display: flex; align-items: center; gap: 8px;">
+            <p class="eyebrow reveal" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
               <img src="assets/teams/cp.png" alt="CP" style="height: 24px;" onerror="this.style.display='none'" />
-              Campeonato de Portugal · 2026/27
+              A disputar o Campeonato de Portugal · 2026/27
             </p>
             <h1 class="reveal">Orgulho<br /><span class="outline">de Portel.</span></h1>
-            <p class="lead reveal" style="font-weight: 600; font-size: 1.4rem; color: var(--accent-2);">Mais que um clube, uma paixão.</p>
-            
-            <div class="hero-next-match reveal" id="heroMatch" style="margin-top: 32px; background: rgba(255,255,255,0.05); padding: 16px 24px; border-radius: 16px; border: 1px solid var(--line); display: inline-flex; align-items: center; gap: 20px;">
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <img id="hmHomeBadge" src="" style="width: 40px;" onerror="this.style.display='none'"/>
-                <strong id="hmHome"></strong>
-              </div>
-              <span style="color: var(--dim); font: 800 16px var(--display);">VS</span>
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <img id="hmAwayBadge" src="" style="width: 40px;" onerror="this.style.display='none'"/>
-                <strong id="hmAway"></strong>
-              </div>
-              <div style="padding-left: 16px; border-left: 1px solid var(--line); display: flex; gap: 8px;">
-                <b id="hcd-d" style="font: 800 20px var(--display);"></b><small style="color: var(--dim); align-self: center;">d</small>
-                <b id="hcd-h" style="font: 800 20px var(--display);"></b><small style="color: var(--dim); align-self: center;">h</small>
-                <b id="hcd-m" style="font: 800 20px var(--display);"></b><small style="color: var(--dim); align-self: center;">m</small>
-              </div>
-            </div>
+            <p class="lead reveal accent-text">Mais que um clube, uma paixão.</p>
           </div>
         </div>
       </div>
@@ -68,8 +54,11 @@
         </header>
 
         <article class="match reveal">
-          <div class="team">
-            <span class="badge"><img id="mHomeBadge" src="" onerror="this.style.display='none'"></span>
+          <div class="match-bg-effect"></div>
+          <div class="team home-team">
+            <div class="badge-wrap">
+              <span class="badge glow"><img id="mHomeBadge" src="" onerror="this.style.display='none'"></span>
+            </div>
             <strong id="mHome"></strong>
           </div>
           <div class="match-mid">
@@ -82,8 +71,10 @@
             </div>
             <p class="match-meta" id="mMeta"></p>
           </div>
-          <div class="team">
-            <span class="badge alt"><img id="mAwayBadge" src="" onerror="this.style.display='none'"></span>
+          <div class="team away-team">
+            <div class="badge-wrap">
+              <span class="badge"><img id="mAwayBadge" src="" onerror="this.style.display='none'"></span>
+            </div>
             <strong id="mAway"></strong>
           </div>
         </article>
@@ -99,7 +90,7 @@
     <section class="section alt" id="equipa">
       <div class="wrap">
         <header class="section-head reveal">
-          <p class="eyebrow">Plantel</p>
+          <p class="eyebrow">Plantel 26/27</p>
           <h2>A Equipa</h2>
         </header>
 
@@ -113,18 +104,22 @@
           </div>
           <label class="search">
             <span class="sr">Pesquisar jogador</span>
-            <input id="search" type="search" placeholder="Pesquisar..." autocomplete="off" />
+            <input id="search" type="search" placeholder="Procurar atleta..." autocomplete="off" />
           </label>
         </div>
-
         <div class="grid" id="squad"></div>
+
+        <div class="staff-section reveal">
+          <h3 class="sub staff-title">Equipa Técnica</h3>
+          <div class="grid staff-grid" id="staff"></div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="classificacao">
       <div class="wrap">
         <header class="section-head reveal">
-          <p class="eyebrow">Tabela</p>
+          <p class="eyebrow">Série 4</p>
           <h2>Classificação</h2>
         </header>
         <div class="table-wrap reveal">
@@ -138,25 +133,37 @@
 
     <section class="section alt" id="clube">
       <div class="wrap about reveal">
-        <div>
-          <p class="eyebrow">História</p>
-          <h2 id="clubName">GD Portel</h2>
-          <p class="lead dim" style="margin-bottom: 32px;">Fundado em 1965, o Grupo Desportivo de Portel orgulha-se de representar o concelho e a região de Évora aos mais altos níveis do futebol nacional.</p>
-          <div id="palmares"></div>
+        <div class="about-info">
+          <p class="eyebrow">Identidade</p>
+          <h2>A Nossa História</h2>
+          <p class="lead dim">Fundado em 1965, o <strong style="color: var(--text);">Grupo Desportivo de Portel</strong> orgulha-se de representar o concelho e a região de Évora aos mais altos níveis do futebol nacional.</p>
+          
+          <div class="president-card glass-card">
+            <img id="presPhoto" src="" alt="Presidente" onerror="this.style.display='none'">
+            <div class="pres-info">
+              <p class="eyebrow">Presidente</p>
+              <h4 id="presName"></h4>
+            </div>
+          </div>
         </div>
-        <dl class="facts" id="facts"></dl>
+        <div class="about-stats">
+          <div id="palmares"></div>
+          <dl class="facts" id="facts"></dl>
+        </div>
       </div>
     </section>
   </main>
   
   <footer class="footer">
     <div class="wrap foot">
-      <span class="brand-text">GD Portel</span>
-      <p>© 2026</p>
+      <div class="footer-brand">
+        <img src="assets/teams/gdportel.png" alt="GDP" width="32" onerror="this.style.display='none'"/>
+        <span class="brand-text">GD Portel</span>
+      </div>
+      <p>© 2026 Grupo Desportivo de Portel. Todos os direitos reservados.</p>
     </div>
   </footer>
 
-  <script src="data/players.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js"></script> 
 </body>
 </html>
