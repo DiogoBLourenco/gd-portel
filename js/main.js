@@ -1,7 +1,7 @@
 (() => {
   "use strict";
   const $ = (s, el = document) => el.querySelector(s);
-  const club = { season: "2026/27", fullName: "GD Portel" }, players = window.PLAYERS || [];
+  const club = window.CLUB || { fullName: "GD Portel" }, players = window.PLAYERS || [];
   const POS = { GR: "Guarda-redes", DEF: "Defesa", MED: "Médio", AV: "Avançado" };
   const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const fmtDate = (d) => new Date(d).toLocaleDateString("pt-PT", { day: "2-digit", month: "short", year: "numeric" });
@@ -79,13 +79,24 @@
   const renderLogo = (logo) => logo ? `<img src="${esc(logo)}" class="res-logo" onerror="this.style.display='none'">` : "";
 
   if ($("#results")) {
-    $("#results").innerHTML = window.RESULTS.map(r => `
-      <li>
-        <span class="d">${r.comp} · ${fmtDate(r.date)}</span>
-        <span class="h">${r.home === club.fullName ? `<b>${esc(r.home)}</b>` : esc(r.home)} ${renderLogo(r.homeLogo)}</span>
-        <span class="sc">${esc(r.hs)} - ${esc(r.as)}</span>
-        <span class="a">${renderLogo(r.awayLogo)} ${r.away.includes(club.fullName) ? `<b>${esc(r.away)}</b>` : esc(r.away)}</span>
-      </li>`).join("");
+    let showAll = false;
+    const renderResults = () => {
+        const toShow = showAll ? window.RESULTS : window.RESULTS.slice(0, 3);
+        $("#results").innerHTML = toShow.map(r => `
+          <li>
+            <span class="d">${r.comp} · ${fmtDate(r.date)}</span>
+            <span class="h">${r.home.includes(club.fullName) ? `<b>${esc(r.home)}</b>` : esc(r.home)} ${renderLogo(r.homeLogo)}</span>
+            <span class="sc">${esc(r.hs)} - ${esc(r.as)}</span>
+            <span class="a">${renderLogo(r.awayLogo)} ${r.away.includes(club.fullName) ? `<b>${esc(r.away)}</b>` : esc(r.away)}</span>
+          </li>`).join("");
+    };
+    renderResults();
+
+    $("#toggleResults")?.addEventListener("click", (e) => {
+        showAll = !showAll;
+        renderResults();
+        e.target.textContent = showAll ? "Ocultar resultados" : "Ver todos os resultados";
+    });
   }
 
   if ($("#standings")) {
@@ -98,7 +109,25 @@
       </tr>`).join("");
   }
 
-  if ($("#news")) $("#news").innerHTML = window.NEWS.map(n => `<article class="post reveal"><span class="tag">${esc(n.tag)}</span><h3>${esc(n.title)}</h3><p>${esc(n.text)}</p><time>${fmtDate(n.date)}</time></article>`).join("");
+  if ($("#clubName")) $("#clubName").textContent = club.fullName;
+  if ($("#facts")) {
+      $("#facts").innerHTML = [
+        ["Fundação", club.founded], ["Associação", club.association], ["Presidente", club.president], ["Estádio", club.stadium], ["Localidade", club.location]
+      ].map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("");
+  }
+  if ($("#palmares") && club.palmares) {
+      $("#palmares").innerHTML = `
+        <h3 class="sub" style="margin-top: 0; margin-bottom: 24px; font-size: 18px;">Palmarés & Marcos Recentes</h3>
+        <ul style="display: grid; gap: 12px;">
+          ${club.palmares.map(p => `
+            <li style="display: flex; gap: 16px; align-items: center; padding: 12px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 12px;">
+              <span style="font-weight: 700; color: var(--accent-2); font-size: 18px; font-family: var(--display); min-width: 60px;">${esc(p.year)}</span>
+              <span style="font-size: 15px;">${esc(p.title)}</span>
+            </li>
+          `).join("")}
+        </ul>
+      `;
+  }
 
   const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.1 }) : null;
   function observe(nodes) { nodes.forEach((n, i) => { if (!io) return n.classList.add("in"); n.style.transitionDelay = Math.min(i % 8, 7) * 40 + "ms"; io.observe(n); }); }

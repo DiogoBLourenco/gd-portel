@@ -52,28 +52,37 @@ window.FIXTURES = [
 window.RESULTS = [
   { comp: "Camp", home: "Imortal DC", away: "GD Portel", hs: "3", as: "0", date: "2026-10-11", homeLogo: "assets/teams/imortal.png", awayLogo: "assets/teams/gdportel.png" },
   { comp: "Camp", home: "GD Portel", away: "Aljustrelense", hs: "1", as: "1", date: "2026-09-27", homeLogo: "assets/teams/gdportel.png", awayLogo: "assets/teams/aljustrelense.png" },
-  { comp: "Camp", home: "Olhanense", away: "GD Portel", hs: "1", as: "0", date: "2026-09-20", homeLogo: "assets/teams/olhanense.png", awayLogo: "assets/teams/gdportel.png" },
+  { comp: "Taça de Portugal", home: "Olhanense", away: "GD Portel", hs: "1", as: "0", date: "2026-09-20", homeLogo: "assets/teams/olhanense.png", awayLogo: "assets/teams/gdportel.png" },
   { comp: "Taça", home: "Lusitano Évora", away: "GD Portel 🏆", hs: "1", as: "1 (8-7 gp)", date: "2026-09-08", homeLogo: "assets/teams/lusitano.png", awayLogo: "assets/teams/gdportel.png" }
 ];
 
 window.STANDINGS = [
-  { pos: 1, team: "Sintrense", logo: "assets/teams/sintrense.png", p: 5, w: 4, d: 1, l: 0, pts: 13, status: "up" },
-  { pos: 2, team: "Imortal DC", logo: "assets/teams/imortal.png", p: 5, w: 4, d: 1, l: 0, pts: 13, status: "up" },
-  { pos: 3, team: "Serpa", logo: "assets/teams/serpa.png", p: 5, w: 3, d: 2, l: 0, pts: 11 },
-  { pos: 4, team: "Juventude SC", logo: "assets/teams/juventudesc.png", p: 5, w: 3, d: 1, l: 1, pts: 10 },
+  { pos: 1, team: "Sintrense", logo: "assets/teams/sintrense.png", p: 5, w: 3, d: 1, l: 1, pts: 10, status: "up" },
+  { pos: 2, team: "Imortal DC", logo: "assets/teams/imortal.png", p: 5, w: 3, d: 1, l: 1, pts: 10, status: "up" },
+  { pos: 3, team: "Serpa", logo: "assets/teams/serpa.png", p: 5, w: 2, d: 3, l: 0, pts: 9 },
+  { pos: 4, team: "Juventude SC", logo: "assets/teams/juventudesc.png", p: 5, w: 2, d: 2, l: 1, pts: 8 },
   { pos: 5, team: "Amora FC", logo: "assets/teams/amora.png", p: 5, w: 2, d: 2, l: 1, pts: 8 },
-  { pos: 6, team: "Real SC", logo: "assets/teams/realsc.png", p: 5, w: 2, d: 2, l: 1, pts: 8 },
-  { pos: 7, team: "GD Lagoa", logo: "assets/teams/gdlagoa.png", p: 5, w: 2, d: 1, l: 2, pts: 7 },
-  { pos: 8, team: "Alcochetense", logo: "assets/teams/alcochetense.png", p: 5, w: 2, d: 1, l: 2, pts: 7 },
-  { pos: 9, team: "Vitória FC", logo: "assets/teams/vitoria.png", p: 5, w: 1, d: 3, l: 1, pts: 6 },
-  { pos: 10, team: "1º Dezembro", logo: "assets/teams/1dezembro.png", p: 5, w: 1, d: 2, l: 2, pts: 5 },
+  { pos: 6, team: "Real SC", logo: "assets/teams/realsc.png", p: 5, w: 1, d: 4, l: 0, pts: 7 },
+  { pos: 7, team: "GD Lagoa", logo: "assets/teams/gdlagoa.png", p: 5, w: 1, d: 3, l: 1, pts: 6 },
+  { pos: 8, team: "Alcochetense", logo: "assets/teams/alcochetense.png", p: 5, w: 1, d: 2, l: 2, pts: 5 },
+  { pos: 9, team: "Vitória FC", logo: "assets/teams/vitoria.png", p: 5, w: 1, d: 2, l: 2, pts: 5 },
+  { pos: 10, team: "1º Dezembro", logo: "assets/teams/1dezembro.png", p: 4, w: 1, d: 2, l: 1, pts: 5 },
   { pos: 11, team: "JD Lajense", logo: "assets/teams/jdlajense.png", p: 5, w: 1, d: 1, l: 3, pts: 4, status: "playoff" },
-  { pos: 12, team: "Santa Clara B", logo: "assets/teams/santaclara.png", p: 5, w: 0, d: 2, l: 3, pts: 2, status: "playoff" },
-  { pos: 13, team: "GD Portel", logo: "assets/teams/gdportel.png", p: 5, w: 0, d: 1, l: 4, pts: 1, me: true, status: "down" },
-  { pos: 14, team: "Aljustrelense", logo: "assets/teams/aljustrelense.png", p: 5, w: 0, d: 0, l: 5, pts: 0, status: "down" }
+  { pos: 12, team: "Santa Clara B", logo: "assets/teams/santaclara.png", p: 4, w: 1, d: 1, l: 2, pts: 4, status: "playoff" },
+  { pos: 13, team: "GD Portel", logo: "assets/teams/gdportel.png", p: 5, w: 0, d: 4, l: 1, pts: 4, me: true, status: "down" },
+  { pos: 14, team: "Aljustrelense", logo: "assets/teams/aljustrelense.png", p: 5, w: 0, d: 2, l: 3, pts: 2, status: "down" }
 ];
 
-window.NEWS = [
-  { tag: "Jogo", title: "Foco total na deslocação aos Açores", date: "2026-10-15", text: "Equipa prepara jogo frente ao JD Lajense." },
-  { tag: "Clube", title: "Mais que um clube, uma paixão", date: "2026-10-01", text: "Adeptos marcam presença em peso nos jogos." }
-];
+window.CLUB = {
+  fullName: "Grupo Desportivo de Portel",
+  founded: "8 de maio de 1965",
+  stadium: "Estádio Sanches de Miranda (2.000 lugares)",
+  location: "Portel, Évora",
+  association: "AF Évora",
+  president: "Luís Salsa",
+  palmares: [
+    { year: "2026/27", title: "Campeonato de Portugal (Competição Nacional)" },
+    { year: "2026/27", title: "Vencedor da Taça dos Campeões / Supertaça" },
+    { year: "2025/26", title: "Campeão da Liga Elite da AF Évora" }
+  ]
+};

@@ -21,7 +21,6 @@
       <a href="#jogo">Jogos</a>
       <a href="#equipa">Equipa</a>
       <a href="#classificacao">Tabela</a>
-      <a href="#noticias">Notícias</a>
       <a href="#clube">Clube</a>
     </nav>
   </header>
@@ -56,7 +55,6 @@
                 <b id="hcd-m" style="font: 800 20px var(--display);"></b><small style="color: var(--dim); align-self: center;">m</small>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -70,7 +68,10 @@
         </header>
 
         <article class="match reveal">
-          <div class="team"><span class="badge" id="mHomeBadgeWrap"><img id="mHomeBadge" src="" onerror="this.style.display='none'"></span><strong id="mHome"></strong></div>
+          <div class="team">
+            <span class="badge"><img id="mHomeBadge" src="" onerror="this.style.display='none'"></span>
+            <strong id="mHome"></strong>
+          </div>
           <div class="match-mid">
             <span class="vs">VS</span>
             <div class="countdown" id="countdown">
@@ -81,10 +82,16 @@
             </div>
             <p class="match-meta" id="mMeta"></p>
           </div>
-          <div class="team"><span class="badge alt" id="mAwayBadgeWrap"><img id="mAwayBadge" src="" onerror="this.style.display='none'"></span><strong id="mAway"></strong></div>
+          <div class="team">
+            <span class="badge alt"><img id="mAwayBadge" src="" onerror="this.style.display='none'"></span>
+            <strong id="mAway"></strong>
+          </div>
         </article>
 
-        <h3 class="sub reveal">Resultados Recentes</h3>
+        <div class="results-header reveal">
+            <h3 class="sub">Resultados Recentes</h3>
+            <button id="toggleResults" class="btn ghost btn-sm">Ver todos os resultados</button>
+        </div>
         <ul class="results reveal" id="results"></ul>
       </div>
     </section>
@@ -129,13 +136,15 @@
       </div>
     </section>
 
-    <section class="section alt" id="noticias">
-      <div class="wrap">
-        <header class="section-head reveal">
-          <p class="eyebrow">Atualidade</p>
-          <h2>Notícias</h2>
-        </header>
-        <div class="news" id="news"></div>
+    <section class="section alt" id="clube">
+      <div class="wrap about reveal">
+        <div>
+          <p class="eyebrow">História</p>
+          <h2 id="clubName">GD Portel</h2>
+          <p class="lead dim" style="margin-bottom: 32px;">Fundado em 1965, o Grupo Desportivo de Portel orgulha-se de representar o concelho e a região de Évora aos mais altos níveis do futebol nacional.</p>
+          <div id="palmares"></div>
+        </div>
+        <dl class="facts" id="facts"></dl>
       </div>
     </section>
   </main>
