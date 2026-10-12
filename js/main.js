@@ -1,7 +1,7 @@
 window.PLAYERS = [
   // GUARDA-REDES
-  { name: "Diogo Águas", number: 1, pos: "GR", photo: "assets/players/aguas.jpg", prevClub: "SC Lusitânia", prevLogo: "assets/teams/lusitania.png", games: 5, goals: 0 },
-  { name: "Ethan Crump", number: 25, pos: "GR", photo: "assets/players/ethan.jpg", prevClub: "SC Pombal", prevLogo: "assets/teams/pombal.png", games: 3, goals: 0 },
+  { name: "Diogo Águas", number: 1, pos: "GR", photo: "assets/players/aguas.jpg", prevClub: "SC Lusitânia", prevLogo: "assets/teams/lusitania.png", games: 5, goals: 9 }, // Atualizado Jogos: 5, Golos Sofridos: 9
+  { name: "Ethan Crump", number: 25, pos: "GR", photo: "assets/players/ethan.jpg", prevClub: "SC Pombal", prevLogo: "assets/teams/pombal.png", games: 3, goals: 2 }, // Atualizado Jogos: 3 (excluindo equipa B), Golos Sofridos: 2
   
   // DEFESAS
   { name: "Igor Costa", number: 13, pos: "DEF", role: "3º Capitão", photo: "assets/players/igor.jpg", prevClub: "Serpa", prevLogo: "assets/teams/serpa.png", games: 8, goals: 1 },
@@ -130,12 +130,12 @@ window.CLUB = {
         </div>
         <div class="stats">
           <div><b class="accent-text">${esc(p.games)}</b><small>Jogos</small></div>
-          <div><b class="accent-text">${esc(p.goals)}</b><small>Golos</small></div>
+          <!-- Condição para mudar o rótulo de Golos para Golos Sofridos se for GR -->
+          <div><b class="accent-text">${esc(p.goals)}</b><small>${p.pos === 'GR' ? 'Sofridos' : 'Golos'}</small></div>
         </div>
       </div>
     </article>`;
 
-  // NOVO CARTÃO DA EQUIPA TÉCNICA (Sem número e Sem posição)
   const staffCardHTML = (s) => `
     <article class="player reveal glass-card staff-card">
       <div class="photo">
@@ -157,7 +157,7 @@ window.CLUB = {
   const renderStaff = () => {
     if (staffEl) {
         staffEl.innerHTML = staff.map(staffCardHTML).join("");
-        observe(document.querySelectorAll(".reveal:not(.in)")); 
+        observe(document.querySelectorAll(".reveal:not(.in)"));
     }
   };
   
@@ -261,5 +261,5 @@ window.CLUB = {
   function observe(nodes) { nodes.forEach((n, i) => { if (!io) return n.classList.add("in"); n.style.transitionDelay = Math.min(i % 8, 7) * 40 + "ms"; io.observe(n); }); }
   
   renderSquad();
-  renderStaff(); // Chama a função para garantir que a equipa técnica é renderizada
+  renderStaff();
 })();
