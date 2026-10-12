@@ -27,8 +27,8 @@
         <div class="prev-club-wrap">
           ${p.prevLogo ? `<img src="${esc(p.prevLogo)}" class="prev-logo" onerror="this.style.display='none'">` : ""}
           <p class="prev">Ex: <span>${esc(p.prevClub)}</span></p>
+          ${p.role ? `<span class="cap-badge">${esc(p.role)}</span>` : ""}
         </div>
-        ${p.role ? `<span class="cap-badge">${esc(p.role)}</span>` : ""}
         <div class="stats">
           <div><b>${esc(p.games)}</b><small>Jogos</small></div>
           <div><b>${esc(p.goals)}</b><small>Golos</small></div>
@@ -76,8 +76,28 @@
       tick(); setInterval(tick, 1000);
   }
 
-  if ($("#results")) $("#results").innerHTML = window.RESULTS.map(r => `<li><span class="d">${r.comp} · ${fmtDate(r.date)}</span><span class="h">${r.home === club.fullName ? `<b>${esc(r.home)}</b>` : esc(r.home)}</span><span class="sc">${esc(r.hs)} - ${esc(r.as)}</span><span class="a">${r.away === club.fullName ? `<b>${esc(r.away)}</b>` : esc(r.away)}</span></li>`).join("");
-  if ($("#standings")) $("#standings").innerHTML = window.STANDINGS.map(t => `<tr class="${t.me ? "me" : ""}"><td>${t.pos}</td><td class="l">${esc(t.team)}</td><td>${t.p}</td><td>${t.w}</td><td>${t.d}</td><td>${t.l}</td><td>${t.pts}</td></tr>`).join("");
+  const renderLogo = (logo) => logo ? `<img src="${esc(logo)}" class="res-logo" onerror="this.style.display='none'">` : "";
+
+  if ($("#results")) {
+    $("#results").innerHTML = window.RESULTS.map(r => `
+      <li>
+        <span class="d">${r.comp} · ${fmtDate(r.date)}</span>
+        <span class="h">${r.home === club.fullName ? `<b>${esc(r.home)}</b>` : esc(r.home)} ${renderLogo(r.homeLogo)}</span>
+        <span class="sc">${esc(r.hs)} - ${esc(r.as)}</span>
+        <span class="a">${renderLogo(r.awayLogo)} ${r.away.includes(club.fullName) ? `<b>${esc(r.away)}</b>` : esc(r.away)}</span>
+      </li>`).join("");
+  }
+
+  if ($("#standings")) {
+    $("#standings").innerHTML = window.STANDINGS.map(t => `
+      <tr class="${t.me ? "me" : ""} st-${t.status || ''}">
+        <td>${t.pos}</td>
+        <td class="l tbl-team">${renderLogo(t.logo)} ${esc(t.team)}</td>
+        <td>${t.p}</td><td>${t.w}</td><td>${t.d}</td><td>${t.l}</td>
+        <td><strong>${t.pts}</strong></td>
+      </tr>`).join("");
+  }
+
   if ($("#news")) $("#news").innerHTML = window.NEWS.map(n => `<article class="post reveal"><span class="tag">${esc(n.tag)}</span><h3>${esc(n.title)}</h3><p>${esc(n.text)}</p><time>${fmtDate(n.date)}</time></article>`).join("");
 
   const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.1 }) : null;

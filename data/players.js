@@ -4,7 +4,7 @@ window.PLAYERS = [
   { name: "Ethan Crump", number: 17, pos: "GR", photo: "assets/players/ethan.jpg", prevClub: "SC Pombal", prevLogo: "assets/teams/pombal.png", games: 3, goals: 0 },
 
   // DEFESAS
-  { name: "Igor Costa", number: 1, pos: "DEF", photo: "assets/players/igor.jpg", prevClub: "Serpa", prevLogo: "assets/teams/serpa.png", games: 8, goals: 1 },
+  { name: "Igor Costa", number: 1, pos: "DEF", role: "3º Capitão", photo: "assets/players/igor.jpg", prevClub: "Serpa", prevLogo: "assets/teams/serpa.png", games: 8, goals: 1 },
   { name: "Diogo Braizinha", number: 2, pos: "DEF", role: "Capitão", photo: "assets/players/braizinha.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 8, goals: 2 },
   { name: "Ivanilson Semedo", number: 4, pos: "DEF", photo: "assets/players/ivanilson.jpg", prevClub: "Monte Trigo", prevLogo: "assets/teams/montetrigo.png", games: 8, goals: 0 },
   { name: "Clésio Gomes", number: 6, pos: "DEF", photo: "assets/players/clesio.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 8, goals: 0 },
@@ -31,15 +31,12 @@ window.PLAYERS = [
 ];
 
 window.FIXTURES = [
-  // Supertaça e Taça
   { comp: "Supertaça", home: "GD Portel", away: "Messejanense", date: "2026-08-30T17:00:00", venue: "Estádio Sanches de Miranda", homeLogo: "assets/teams/gdportel.png", awayLogo: "assets/teams/messejanense.png" },
   { comp: "Taça de Portugal", home: "Lusitano Évora", away: "GD Portel", date: "2026-09-08T15:00:00", venue: "Campo Estrela", homeLogo: "assets/teams/lusitano.png", awayLogo: "assets/teams/gdportel.png" },
-  
-  // Campeonato
   { comp: "Campeonato", home: "Olhanense", away: "GD Portel", date: "2026-09-20T15:00:00", venue: "Estádio José Arcanjo", homeLogo: "assets/teams/olhanense.png", awayLogo: "assets/teams/gdportel.png" },
   { comp: "Campeonato", home: "GD Portel", away: "Aljustrelense", date: "2026-09-27T15:00:00", venue: "Estádio Sanches de Miranda", homeLogo: "assets/teams/gdportel.png", awayLogo: "assets/teams/aljustrelense.png" },
   { comp: "Campeonato", home: "Imortal DC", away: "GD Portel", date: "2026-10-11T15:00:00", venue: "Estádio Municipal de Albufeira", homeLogo: "assets/teams/imortal.png", awayLogo: "assets/teams/gdportel.png" },
-  { comp: "Campeonato", home: "JD Lajense", away: "GD Portel", date: "2026-10-18T12:00:00", venue: "Estádio Municipal das Lajes", homeLogo: "assets/teams/jdlajense.png", awayLogo: "assets/teams/gdportel.png" }, // Jogo de hoje ajustado
+  { comp: "Campeonato", home: "JD Lajense", away: "GD Portel", date: "2026-10-18T12:00:00", venue: "Estádio Municipal das Lajes", homeLogo: "assets/teams/jdlajense.png", awayLogo: "assets/teams/gdportel.png" },
   { comp: "Campeonato", home: "GD Portel", away: "Santa Clara B", date: "2026-10-25T15:00:00", venue: "Estádio Sanches de Miranda", homeLogo: "assets/teams/gdportel.png", awayLogo: "assets/teams/santaclara.png" },
   { comp: "Campeonato", home: "Serpa", away: "GD Portel", date: "2026-11-01T15:00:00", venue: "Complexo Desportivo de Serpa", homeLogo: "assets/teams/serpa.png", awayLogo: "assets/teams/gdportel.png" },
   { comp: "Campeonato", home: "GD Portel", away: "Amora FC", date: "2026-11-08T15:00:00", venue: "Estádio Sanches de Miranda", homeLogo: "assets/teams/gdportel.png", awayLogo: "assets/teams/amora.png" },
@@ -53,16 +50,27 @@ window.FIXTURES = [
 ];
 
 window.RESULTS = [
-  { comp: "Camp", home: "Imortal DC", away: "GD Portel", hs: 3, as: 0, date: "2026-10-11" },
-  { comp: "Camp", home: "GD Portel", away: "Aljustrelense", hs: 1, as: 1, date: "2026-09-27" },
-  { comp: "Camp", home: "Olhanense", away: "GD Portel", hs: 1, as: 0, date: "2026-09-20" },
-  { comp: "Taça", home: "Lusitano Évora", away: "GD Portel", hs: 2, as: 1, date: "2026-09-08" }
+  { comp: "Camp", home: "Imortal DC", away: "GD Portel", hs: "3", as: "0", date: "2026-10-11", homeLogo: "assets/teams/imortal.png", awayLogo: "assets/teams/gdportel.png" },
+  { comp: "Camp", home: "GD Portel", away: "Aljustrelense", hs: "1", as: "1", date: "2026-09-27", homeLogo: "assets/teams/gdportel.png", awayLogo: "assets/teams/aljustrelense.png" },
+  { comp: "Camp", home: "Olhanense", away: "GD Portel", hs: "1", as: "0", date: "2026-09-20", homeLogo: "assets/teams/olhanense.png", awayLogo: "assets/teams/gdportel.png" },
+  { comp: "Taça", home: "Lusitano Évora", away: "GD Portel 🏆", hs: "1", as: "1 (8-7 gp)", date: "2026-09-08", homeLogo: "assets/teams/lusitano.png", awayLogo: "assets/teams/gdportel.png" }
 ];
 
 window.STANDINGS = [
-  { pos: 1, team: "Sintrense", p: 5, w: 4, d: 1, l: 0, pts: 13 },
-  { pos: 11, team: "GD Portel", p: 5, w: 0, d: 3, l: 2, pts: 3, me: true },
-  { pos: 14, team: "JD Lajense", p: 5, w: 0, d: 1, l: 4, pts: 1 }
+  { pos: 1, team: "Sintrense", logo: "assets/teams/sintrense.png", p: 5, w: 4, d: 1, l: 0, pts: 13, status: "up" },
+  { pos: 2, team: "Imortal DC", logo: "assets/teams/imortal.png", p: 5, w: 4, d: 1, l: 0, pts: 13, status: "up" },
+  { pos: 3, team: "Serpa", logo: "assets/teams/serpa.png", p: 5, w: 3, d: 2, l: 0, pts: 11 },
+  { pos: 4, team: "Juventude SC", logo: "assets/teams/juventudesc.png", p: 5, w: 3, d: 1, l: 1, pts: 10 },
+  { pos: 5, team: "Amora FC", logo: "assets/teams/amora.png", p: 5, w: 2, d: 2, l: 1, pts: 8 },
+  { pos: 6, team: "Real SC", logo: "assets/teams/realsc.png", p: 5, w: 2, d: 2, l: 1, pts: 8 },
+  { pos: 7, team: "GD Lagoa", logo: "assets/teams/gdlagoa.png", p: 5, w: 2, d: 1, l: 2, pts: 7 },
+  { pos: 8, team: "Alcochetense", logo: "assets/teams/alcochetense.png", p: 5, w: 2, d: 1, l: 2, pts: 7 },
+  { pos: 9, team: "Vitória FC", logo: "assets/teams/vitoria.png", p: 5, w: 1, d: 3, l: 1, pts: 6 },
+  { pos: 10, team: "1º Dezembro", logo: "assets/teams/1dezembro.png", p: 5, w: 1, d: 2, l: 2, pts: 5 },
+  { pos: 11, team: "JD Lajense", logo: "assets/teams/jdlajense.png", p: 5, w: 1, d: 1, l: 3, pts: 4, status: "playoff" },
+  { pos: 12, team: "Santa Clara B", logo: "assets/teams/santaclara.png", p: 5, w: 0, d: 2, l: 3, pts: 2, status: "playoff" },
+  { pos: 13, team: "GD Portel", logo: "assets/teams/gdportel.png", p: 5, w: 0, d: 1, l: 4, pts: 1, me: true, status: "down" },
+  { pos: 14, team: "Aljustrelense", logo: "assets/teams/aljustrelense.png", p: 5, w: 0, d: 0, l: 5, pts: 0, status: "down" }
 ];
 
 window.NEWS = [
