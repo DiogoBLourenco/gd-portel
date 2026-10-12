@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GD Portel — Campeonato de Portugal</title>
+  <meta name="description" content="Site oficial (não oficial) do GD Portel: plantel, jogos, classificação e notícias do Campeonato de Portugal." />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Ligação ao ficheiro de estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <a class="brand" href="#inicio" aria-label="GD Portel">
+      <span class="crest" aria-hidden="true">GDP</span>
+      <span class="brand-text">GD Portel</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="menu" id="menu">
+      <a href="#jogo">Jogos</a>
+      <a href="#equipa">Equipa</a>
+      <a href="#classificacao">Classificação</a>
+      <a href="#noticias">Notícias</a>
+      <a href="#clube">Clube</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow reveal">Campeonato de Portugal · <span id="season"></span></p>
+        <h1 class="reveal">Orgulho<br /><span class="outline">de Portel.</span></h1>
+        <p class="lead reveal">A casa do GD Portel — plantel, jogos, classificação e tudo o que se passa no clube.</p>
+        <div class="cta reveal">
+          <a class="btn primary" href="#equipa">Conhecer a equipa</a>
+          <a class="btn ghost" href="#jogo">Próximo jogo</a>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">Scroll</div>
+    </section>
+
+    <!-- PRÓXIMO JOGO -->
+    <section class="section" id="jogo">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Matchday</p>
+          <h2>Próximo jogo</h2>
+        </header>
+
+        <article class="match reveal" id="nextMatch">
+          <div class="team"><span class="badge" id="mHomeBadge"></span><strong id="mHome"></strong></div>
+          <div class="match-mid">
+            <span class="vs">VS</span>
+            <div class="countdown" id="countdown" aria-live="off">
+              <div><b id="cd-d">00</b><small>dias</small></div>
+              <div><b id="cd-h">00</b><small>horas</small></div>
+              <div><b id="cd-m">00</b><small>min</small></div>
+              <div><b id="cd-s">00</b><small>seg</small></div>
+            </div>
+            <p class="match-meta" id="mMeta"></p>
+          </div>
+          <div class="team"><span class="badge alt" id="mAwayBadge"></span><strong id="mAway"></strong></div>
+        </article>
+
+        <h3 class="sub reveal">Últimos resultados</h3>
+        <ul class="results reveal" id="results"></ul>
+      </div>
+    </section>
+
+    <!-- EQUIPA -->
+    <section class="section alt" id="equipa">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Plantel</p>
+          <h2>A Equipa</h2>
+        </header>
+
+        <div class="toolbar reveal">
+          <div class="tabs" id="tabs" role="tablist" aria-label="Filtrar por posição">
+            <button class="tab active" data-pos="ALL" role="tab">Todos</button>
+            <button class="tab" data-pos="GR" role="tab">Guarda-redes</button>
+            <button class="tab" data-pos="DEF" role="tab">Defesas</button>
+            <button class="tab" data-pos="MED" role="tab">Médios</button>
+            <button class="tab" data-pos="AV" role="tab">Avançados</button>
+          </div>
+          <label class="search">
+            <span class="sr">Pesquisar jogador</span>
+            <input id="search" type="search" placeholder="Pesquisar jogador…" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="grid" id="squad"></div>
+        <p class="empty" id="empty" hidden>Nenhum jogador encontrado.</p>
+      </div>
+    </section>
+
+    <!-- CLASSIFICAÇÃO -->
+    <section class="section" id="classificacao">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Tabela</p>
+          <h2>Classificação</h2>
+        </header>
+        <div class="table-wrap reveal">
+          <table class="table">
+            <thead><tr><th>#</th><th class="l">Equipa</th><th>J</th><th>V</th><th>E</th><th>D</th><th>Pts</th></tr></thead>
+            <tbody id="standings"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTÍCIAS -->
+    <section class="section alt" id="noticias">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">Atualidade</p>
+          <h2>Notícias</h2>
+        </header>
+        <div class="news" id="news"></div>
+      </div>
+    </section>
+
+    <!-- CLUBE -->
+    <section class="section" id="clube">
+      <div class="wrap about reveal">
+        <div>
+          <p class="eyebrow">O Clube</p>
+          <h2 id="clubName"></h2>
+          <p class="lead dim">Do coração do Alentejo para o Campeonato de Portugal. Substitui este texto pela história do clube, fundação, títulos e momentos marcantes.</p>
+        </div>
+        <dl class="facts" id="facts"></dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <span class="brand-text">GD Portel</span>
+      <p>© <span id="year"></span> · Site de demonstração, não oficial.</p>
+      <div class="social" id="social"></div>
+    </div>
+  </footer>
+
+  <!-- Ligações aos ficheiros de JavaScript -->
+  <script src="data/players.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
