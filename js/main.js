@@ -1,35 +1,36 @@
 window.PLAYERS = [
   // GUARDA-REDES
-  { name: "Diogo Águas", number: 1, pos: "GR", photo: "assets/players/aguas.jpg", prevClub: "SC Lusitânia", prevLogo: "assets/teams/lusitania.png", games: 6, goals: 11 }, // +1 jogo, +2 golos sofridos (vs Lajense)
+  { name: "Diogo Águas", number: 1, pos: "GR", photo: "assets/players/aguas.jpg", prevClub: "SC Lusitânia", prevLogo: "assets/teams/lusitania.png", games: 7, goals: 12 },
   { name: "Ethan Crump", number: 25, pos: "GR", photo: "assets/players/ethan.jpg", prevClub: "SC Pombal", prevLogo: "assets/teams/pombal.png", games: 3, goals: 2 },
   
   // DEFESAS
-  { name: "Igor Costa", number: 13, pos: "DEF", role: "3º Capitão", photo: "assets/players/igor.jpg", prevClub: "Serpa", prevLogo: "assets/teams/serpa.png", games: 9, goals: 1 }, // +1 jogo
-  { name: "Diogo Braizinha", number: 3, pos: "DEF", role: "Capitão", photo: "assets/players/braizinha.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 9, goals: 2 }, // +1 jogo
-  { name: "Ivanilson Semedo", number: 15, pos: "DEF", photo: "assets/players/ivanilson.jpg", prevClub: "Monte Trigo", prevLogo: "assets/teams/montetrigo.png", games: 9, goals: 0 }, // +1 jogo
-  { name: "Clésio Gomes", number: 22, pos: "DEF", photo: "assets/players/clesio.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 9, goals: 0 }, // +1 jogo
-  { name: "Tiago Santos", number: 2, pos: "DEF", photo: "assets/players/tiago.jpg", prevClub: "Mirandela", prevLogo: "assets/teams/mirandela.png", games: 8, goals: 0 }, // +1 jogo
+  { name: "Igor Costa", number: 13, pos: "DEF", role: "3º Capitão", photo: "assets/players/igor.jpg", prevClub: "Serpa", prevLogo: "assets/teams/serpa.png", games: 10, goals: 1 },
+  { name: "Diogo Braizinha", number: 3, pos: "DEF", role: "Capitão", photo: "assets/players/braizinha.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 10, goals: 2 },
+  { name: "Ivanilson Semedo", number: 15, pos: "DEF", photo: "assets/players/ivanilson.jpg", prevClub: "Monte Trigo", prevLogo: "assets/teams/montetrigo.png", games: 9, goals: 0 },
+  { name: "Clésio Gomes", number: 22, pos: "DEF", photo: "assets/players/clesio.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 10, goals: 0 },
+  { name: "Tiago Santos", number: 2, pos: "DEF", photo: "assets/players/tiago.jpg", prevClub: "Mirandela", prevLogo: "assets/teams/mirandela.png", games: 9, goals: 0 },
   { name: "Rodrigo Rodeia", number: 4, pos: "DEF", photo: "assets/players/rodeia.jpg", prevClub: "At. Reguengos", prevLogo: "assets/teams/reguengos.png", games: 5, goals: 0 },
-  { name: "Pedro Souza", number: 83, pos: "DEF", photo: "assets/players/pedro.jpg", prevClub: "O Elvas", prevLogo: "assets/teams/elvas.png", games: 5, goals: 0 }, // +1 jogo
+  { name: "Pedro Souza", number: 83, pos: "DEF", photo: "assets/players/pedro.jpg", prevClub: "O Elvas", prevLogo: "assets/teams/elvas.png", games: 6, goals: 0 },
   { name: "Tomás Simão", number: 30, pos: "DEF", photo: "assets/players/tomas.jpg", prevClub: "SC Lusitânia", prevLogo: "assets/teams/lusitania.png", games: 3, goals: 0 },
   { name: "Diogo Borralho", number: 66, pos: "DEF", photo: "assets/players/borralho.jpg", prevClub: "Torreense", prevLogo: "assets/teams/torreense.png", games: 1, goals: 0 },
+  { name: "Gonçalo Bernardo", number: 25, pos: "DEF", photo: "assets/players/benny.jpg", prevClub: "Nogueirense", prevLogo: "assets/teams/nogueirense2.png", games: 1, goals: 0 },
   
   // MÉDIOS
-  { name: "Nelson Machado", number: 10, pos: "MED", role: "Sub-capitão", photo: "assets/players/nelson.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 9, goals: 2 }, // +1 jogo
-  { name: "João Pereira", number: 8, pos: "MED", photo: "assets/players/pereira.jpg", prevClub: "Marinhense", prevLogo: "assets/teams/marinhense.png", games: 9, goals: 0 }, // +1 jogo
-  { name: "Hugo Soares", number: 18, pos: "MED", photo: "assets/players/hugo.jpg", prevClub: "Comércio Indústria", prevLogo: "assets/teams/comercio.png", games: 6, goals: 0 },
+  { name: "Nelson Machado", number: 10, pos: "MED", role: "Sub-capitão", photo: "assets/players/nelson.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 10, goals: 2 },
+  { name: "João Pereira", number: 8, pos: "MED", photo: "assets/players/pereira.jpg", prevClub: "Marinhense", prevLogo: "assets/teams/marinhense.png", games: 9, goals: 0 },
+  { name: "Hugo Soares", number: 18, pos: "MED", photo: "assets/players/hugo.jpg", prevClub: "Comércio Indústria", prevLogo: "assets/teams/comercio.png", games: 7, goals: 0 },
   { name: "Valdo Dabó", number: 6, pos: "MED", photo: "assets/players/dabo.jpg", prevClub: "Mirandela", prevLogo: "assets/teams/mirandela.png", games: 3, goals: 0 },
-  { name: "Pelé", number: 70, pos: "MED", photo: "assets/players/pele.jpg", prevClub: "Nogueirense", prevLogo: "assets/teams/nogueirense.png", games: 1, goals: 0 }, // +1 jogo
+  { name: "Pelé", number: 70, pos: "MED", photo: "assets/players/pele.jpg", prevClub: "Nogueirense", prevLogo: "assets/teams/nogueirense.png", games: 2, goals: 0 },
   
   // AVANÇADOS
-  { name: "Marco Grave", number: 19, pos: "AV", photo: "assets/players/marco.jpg", prevClub: "SC Coimbrões", prevLogo: "assets/teams/coimbroes.png", games: 9, goals: 4 }, // +1 jogo, +1 golo
-  { name: "Ailson Nogueira", number: 9, pos: "AV", photo: "assets/players/ailson.jpg", prevClub: "União 1919", prevLogo: "assets/teams/uniao1919.png", games: 9, goals: 2 }, // +1 jogo
-  { name: "Angelico Dangervil", number: 7, pos: "AV", photo: "assets/players/angelico.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 8, goals: 2 }, // +1 jogo
+  { name: "Marco Grave", number: 19, pos: "AV", photo: "assets/players/marco.jpg", prevClub: "SC Coimbrões", prevLogo: "assets/teams/coimbroes.png", games: 10, goals: 4 },
+  { name: "Ailson Nogueira", number: 9, pos: "AV", photo: "assets/players/ailson.jpg", prevClub: "União 1919", prevLogo: "assets/teams/uniao1919.png", games: 10, goals: 3 },
+  { name: "Angelico Dangervil", number: 7, pos: "AV", photo: "assets/players/angelico.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 9, goals: 2 },
   { name: "Kayã Caldeira", number: 11, pos: "AV", photo: "assets/players/kaya.jpg", prevClub: "Juventude SC", prevLogo: "assets/teams/juventudesc.png", games: 7, goals: 2 },
   { name: "Patchú", number: 77, pos: "AV", photo: "assets/players/patchu.png", prevClub: "Bragança", prevLogo: "assets/teams/braganca.png", games: 7, goals: 1 },
   { name: "Dani Matos", number: 80, pos: "AV", photo: "assets/players/dani.jpg", prevClub: "Esmoriz", prevLogo: "assets/teams/esmoriz.png", games: 2, goals: 0 },
   { name: "Martim Alentado", number: 20, pos: "AV", photo: "assets/players/martim.jpg", prevClub: "AD Sanjoanense", prevLogo: "assets/teams/sanjoanense.png", games: 1, goals: 0 },
-  { name: "Gonçalo", number: "", pos: "AV", photo: "assets/players/goncalopereira.png", prevClub: "Malveira", prevLogo: "assets/teams/malveira.png", games: 1, goals: 0 } // +1 jogo
+  { name: "Gonçalo Pereira", number: 11, pos: "AV", photo: "assets/players/goncalopereira.png", prevClub: "Malveira", prevLogo: "assets/teams/malveira.png", games: 2, goals: 0 }
 ];
 
 // LISTA DA EQUIPA TÉCNICA
@@ -38,11 +39,10 @@ window.STAFF = [
   { name: "Nelson Rodrigues", role: "Treinador Adjunto", photo: "assets/players/nelsonm.jpg" },
   { name: "Gonçalo Silva", role: "Treinador Adjunto", photo: "assets/players/goncalo.jpg" },
   { name: "João Pimenta", role: "Treinador Guarda-Redes", photo: "assets/players/pimenta.jpg" },
-  { name: "Inês Branquinho", role: "Fisioterapeuta", photo: "assets/players/ines.jpg" } // CORRIGIDO PARA .JPG
+  { name: "Inês Branquinho", role: "Fisioterapeuta", photo: "assets/players/ines.jpg" }
 ];
 
 window.FIXTURES = [
-  { comp: "Campeonato", home: "GD Portel", away: "Santa Clara B", date: "2026-10-24T14:00:00", venue: "Estádio D. Nuno Álvares Pereira", homeLogo: "assets/teams/gdportel.png", awayLogo: "assets/teams/santaclara.png" },
   { comp: "Campeonato", home: "Serpa", away: "GD Portel", date: "2026-11-01T15:00:00", venue: "Complexo Desportivo de Serpa", homeLogo: "assets/teams/serpa.png", awayLogo: "assets/teams/gdportel.png" },
   { comp: "Campeonato", home: "GD Portel", away: "Amora FC", date: "2026-11-08T15:00:00", venue: "Estádio D. Nuno Álvares Pereira", homeLogo: "assets/teams/gdportel.png", awayLogo: "assets/teams/amora.png" },
   { comp: "Campeonato", home: "GD Portel", away: "Vitória FC", date: "2026-12-06T15:00:00", venue: "Estádio D. Nuno Álvares Pereira", homeLogo: "assets/teams/gdportel.png", awayLogo: "assets/teams/vitoria.png" },
@@ -52,7 +52,8 @@ window.FIXTURES = [
 ];
 
 window.RESULTS = [
-  { comp: "Camp (J6)", home: "JD Lajense", away: "GD Portel", hs: "2", as: "1", date: "2026-10-18", homeLogo: "assets/teams/jdlajense.png", awayLogo: "assets/teams/gdportel.png" },
+  { comp: "Camp (J6)", home: "GD Portel", away: "Santa Clara B", hs: "1", as: "1", date: "2026-10-24", homeLogo: "assets/teams/gdportel.png", awayLogo: "assets/teams/santaclara.png" },
+  { comp: "Camp (J9)", home: "JD Lajense", away: "GD Portel", hs: "2", as: "1", date: "2026-10-18", homeLogo: "assets/teams/jdlajense.png", awayLogo: "assets/teams/gdportel.png" },
   { comp: "Camp (J5)", home: "Imortal DC", away: "GD Portel", hs: "3", as: "0", date: "2026-10-11", homeLogo: "assets/teams/imortal.png", awayLogo: "assets/teams/gdportel.png" },
   { comp: "Taça Portugal (2E)", home: "Olhanense", away: "GD Portel", hs: "1", as: "0", date: "2026-09-20", homeLogo: "assets/teams/olhanense.png", awayLogo: "assets/teams/gdportel.png" },
   { comp: "Camp (J4)", home: "Aljustrelense", away: "GD Portel", hs: "1", as: "1", date: "2026-09-13", homeLogo: "assets/teams/aljustrelense.png", awayLogo: "assets/teams/gdportel.png" },
@@ -64,20 +65,20 @@ window.RESULTS = [
 ];
 
 window.STANDINGS = [
-  { pos: 1, team: "Sintrense", logo: "assets/teams/sintrense.png", p: 5, w: 3, d: 1, l: 1, pts: 10, status: "up" },
-  { pos: 2, team: "Imortal DC", logo: "assets/teams/imortal.png", p: 5, w: 3, d: 1, l: 1, pts: 10, status: "up" },
-  { pos: 3, team: "Serpa", logo: "assets/teams/serpa.png", p: 5, w: 2, d: 3, l: 0, pts: 9 },
-  { pos: 4, team: "Juventude SC", logo: "assets/teams/juventudesc.png", p: 5, w: 2, d: 2, l: 1, pts: 8 },
-  { pos: 5, team: "Amora FC", logo: "assets/teams/amora.png", p: 5, w: 2, d: 2, l: 1, pts: 8 },
-  { pos: 6, team: "Real SC", logo: "assets/teams/realsc.png", p: 5, w: 1, d: 4, l: 0, pts: 7 },
-  { pos: 7, team: "JD Lajense", logo: "assets/teams/jdlajense.png", p: 6, w: 2, d: 1, l: 3, pts: 7 },
-  { pos: 8, team: "GD Lagoa", logo: "assets/teams/gdlagoa.png", p: 5, w: 1, d: 3, l: 1, pts: 6 },
-  { pos: 9, team: "Alcochetense", logo: "assets/teams/alcochetense.png", p: 5, w: 1, d: 2, l: 2, pts: 5 },
-  { pos: 10, team: "Vitória FC", logo: "assets/teams/vitoria.png", p: 5, w: 1, d: 2, l: 2, pts: 5 },
-  { pos: 11, team: "1º Dezembro", logo: "assets/teams/1dezembro.png", p: 4, w: 1, d: 2, l: 1, pts: 5, status: "playoff" },
-  { pos: 12, team: "Santa Clara B", logo: "assets/teams/santaclara.png", p: 4, w: 1, d: 1, l: 2, pts: 4, status: "playoff" },
-  { pos: 13, team: "GD Portel", logo: "assets/teams/gdportel.png", p: 6, w: 0, d: 4, l: 2, pts: 4, me: true, status: "down" },
-  { pos: 14, team: "Aljustrelense", logo: "assets/teams/aljustrelense.png", p: 5, w: 0, d: 2, l: 3, pts: 2, status: "down" }
+  { pos: 1, team: "Sintrense", logo: "assets/teams/sintrense.png", p: 6, w: 4, d: 1, l: 1, pts: 13, status: "up" },
+  { pos: 2, team: "Imortal DC", logo: "assets/teams/imortal.png", p: 6, w: 3, d: 2, l: 1, pts: 11, status: "up" },
+  { pos: 3, team: "Real SC", logo: "assets/teams/realsc.png", p: 6, w: 2, d: 4, l: 0, pts: 10 },
+  { pos: 4, team: "JD Lajense", logo: "assets/teams/jdlajense.png", p: 7, w: 3, d: 1, l: 3, pts: 10 },
+  { pos: 5, team: "Serpa", logo: "assets/teams/serpa.png", p: 6, w: 2, d: 3, l: 1, pts: 9 },
+  { pos: 6, team: "Juventude SC", logo: "assets/teams/juventudesc.png", p: 6, w: 2, d: 2, l: 2, pts: 8 },
+  { pos: 7, team: "Amora FC", logo: "assets/teams/amora.png", p: 6, w: 2, d: 2, l: 2, pts: 8 },
+  { pos: 8, team: "1º Dezembro", logo: "assets/teams/1dezembro.png", p: 5, w: 2, d: 2, l: 1, pts: 8 },
+  { pos: 9, team: "Alcochetense", logo: "assets/teams/alcochetense.png", p: 6, w: 2, d: 2, l: 2, pts: 8 },
+  { pos: 10, team: "GD Lagoa", logo: "assets/teams/gdlagoa.png", p: 6, w: 1, d: 3, l: 2, pts: 6 },
+  { pos: 11, team: "Santa Clara B", logo: "assets/teams/santaclara.png", p: 5, w: 1, d: 2, l: 2, pts: 5, status: "playoff" },
+  { pos: 12, team: "GD Portel", logo: "assets/teams/gdportel.png", p: 7, w: 0, d: 5, l: 2, pts: 5, me: true, status: "playoff" },
+  { pos: 13, team: "Vitória FC", logo: "assets/teams/vitoria.png", p: 6, w: 1, d: 2, l: 3, pts: 5, status: "down" },
+  { pos: 14, team: "Aljustrelense", logo: "assets/teams/aljustrelense.png", p: 6, w: 0, d: 3, l: 3, pts: 3, status: "down" }
 ];
 
 window.CLUB = {
@@ -133,7 +134,6 @@ window.CLUB = {
         </div>
         <div class="stats">
           <div><b class="accent-text">${esc(p.games)}</b><small>Jogos</small></div>
-          <!-- Condição para mudar o rótulo de Golos para Golos Sofridos se for GR -->
           <div><b class="accent-text">${esc(p.goals)}</b><small>${p.pos === 'GR' ? 'Sofridos' : 'Golos'}</small></div>
         </div>
       </div>
