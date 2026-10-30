@@ -13,7 +13,7 @@ window.PLAYERS = [
   { name: "Pedro Souza", number: 83, pos: "DEF", photo: "assets/players/pedro.jpg", prevClub: "O Elvas", prevLogo: "assets/teams/elvas.png", games: 6, goals: 0 },
   { name: "Tomás Simão", number: 30, pos: "DEF", photo: "assets/players/tomas.jpg", prevClub: "SC Lusitânia", prevLogo: "assets/teams/lusitania.png", games: 3, goals: 0 },
   // { name: "Diogo Borralho", number: 66, pos: "DEF", photo: "assets/players/borralho.jpg", prevClub: "Torreense", prevLogo: "assets/teams/torreense.png", games: 1, goals: 0 },
-  { name: "Benny", number: 25, pos: "DEF", photo: "assets/players/benny.jpg", prevClub: "Nogueirense", prevLogo: "assets/teams/nogueirense2.png", games: 1, goals: 0 },
+  { name: "Gonçalo Bernardo", number: 25, pos: "DEF", photo: "assets/players/benny.jpg", prevClub: "Nogueirense", prevLogo: "assets/teams/nogueirense2.png", games: 1, goals: 0 },
   
   // MÉDIOS
   { name: "Nelson Machado", number: 10, pos: "MED", role: "Sub-capitão", photo: "assets/players/nelson.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 10, goals: 2 },
