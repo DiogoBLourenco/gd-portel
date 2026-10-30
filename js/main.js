@@ -9,11 +9,11 @@ window.PLAYERS = [
   { name: "Ivanilson Semedo", number: 15, pos: "DEF", photo: "assets/players/ivanilson.jpg", prevClub: "Monte Trigo", prevLogo: "assets/teams/montetrigo.png", games: 9, goals: 0 },
   { name: "Clésio Gomes", number: 22, pos: "DEF", photo: "assets/players/clesio.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 10, goals: 0 },
   { name: "Tiago Santos", number: 2, pos: "DEF", photo: "assets/players/tiago.jpg", prevClub: "Mirandela", prevLogo: "assets/teams/mirandela.png", games: 9, goals: 0 },
-  { name: "Rodrigo Rodeia", number: 4, pos: "DEF", photo: "assets/players/rodeia.jpg", prevClub: "At. Reguengos", prevLogo: "assets/teams/reguengos.png", games: 5, goals: 0 },
+  // { name: "Rodrigo Rodeia", number: 4, pos: "DEF", photo: "assets/players/rodeia.jpg", prevClub: "At. Reguengos", prevLogo: "assets/teams/reguengos.png", games: 5, goals: 0 },
   { name: "Pedro Souza", number: 83, pos: "DEF", photo: "assets/players/pedro.jpg", prevClub: "O Elvas", prevLogo: "assets/teams/elvas.png", games: 6, goals: 0 },
   { name: "Tomás Simão", number: 30, pos: "DEF", photo: "assets/players/tomas.jpg", prevClub: "SC Lusitânia", prevLogo: "assets/teams/lusitania.png", games: 3, goals: 0 },
-  { name: "Diogo Borralho", number: 66, pos: "DEF", photo: "assets/players/borralho.jpg", prevClub: "Torreense", prevLogo: "assets/teams/torreense.png", games: 1, goals: 0 },
-  { name: "Gonçalo Bernardo", number: 25, pos: "DEF", photo: "assets/players/benny.jpg", prevClub: "Nogueirense", prevLogo: "assets/teams/nogueirense2.png", games: 1, goals: 0 },
+  // { name: "Diogo Borralho", number: 66, pos: "DEF", photo: "assets/players/borralho.jpg", prevClub: "Torreense", prevLogo: "assets/teams/torreense.png", games: 1, goals: 0 },
+  { name: "Benny", number: 25, pos: "DEF", photo: "assets/players/benny.jpg", prevClub: "Nogueirense", prevLogo: "assets/teams/nogueirense2.png", games: 1, goals: 0 },
   
   // MÉDIOS
   { name: "Nelson Machado", number: 10, pos: "MED", role: "Sub-capitão", photo: "assets/players/nelson.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 10, goals: 2 },
@@ -27,8 +27,8 @@ window.PLAYERS = [
   { name: "Ailson Nogueira", number: 9, pos: "AV", photo: "assets/players/ailson.jpg", prevClub: "União 1919", prevLogo: "assets/teams/uniao1919.png", games: 10, goals: 3 },
   { name: "Angelico Dangervil", number: 7, pos: "AV", photo: "assets/players/angelico.jpg", prevClub: "GD Portel", prevLogo: "assets/teams/gdportel.png", games: 9, goals: 2 },
   { name: "Kayã Caldeira", number: 11, pos: "AV", photo: "assets/players/kaya.jpg", prevClub: "Juventude SC", prevLogo: "assets/teams/juventudesc.png", games: 7, goals: 2 },
-  { name: "Patchú", number: 77, pos: "AV", photo: "assets/players/patchu.png", prevClub: "Bragança", prevLogo: "assets/teams/braganca.png", games: 7, goals: 1 },
-  { name: "Dani Matos", number: 80, pos: "AV", photo: "assets/players/dani.jpg", prevClub: "Esmoriz", prevLogo: "assets/teams/esmoriz.png", games: 2, goals: 0 },
+  // { name: "Patchú", number: 77, pos: "AV", photo: "assets/players/patchu.png", prevClub: "Bragança", prevLogo: "assets/teams/braganca.png", games: 7, goals: 1 },
+  // { name: "Dani Matos", number: 80, pos: "AV", photo: "assets/players/dani.jpg", prevClub: "Esmoriz", prevLogo: "assets/teams/esmoriz.png", games: 2, goals: 0 },
   { name: "Martim Alentado", number: 20, pos: "AV", photo: "assets/players/martim.jpg", prevClub: "AD Sanjoanense", prevLogo: "assets/teams/sanjoanense.png", games: 1, goals: 0 },
   { name: "Gonçalo Pereira", number: 11, pos: "AV", photo: "assets/players/goncalopereira.png", prevClub: "Malveira", prevLogo: "assets/teams/malveira.png", games: 2, goals: 0 }
 ];

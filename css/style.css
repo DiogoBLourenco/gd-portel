@@ -1,6 +1,7 @@
 :root { 
   --accent: #e11d2e; 
   --accent-2: #ff4757; 
+  --accent-blue: #0066cc;
   --bg: #07090d; 
   --bg-2: #0b0d14; 
   --card: rgba(20, 24, 36, 0.4); 
@@ -110,6 +111,124 @@ ul { list-style: none; }
 .res-logo { width: 28px; height: 28px; object-fit: contain; }
 .mobile-break { display: none; }
 
+/* SECÇÃO DO EQUIPAMENTO (O NOSSO MANTO) */
+.kit-section {
+  background: radial-gradient(circle at 25% 50%, rgba(225,29,46,0.14), transparent 50%),
+              radial-gradient(circle at 75% 50%, rgba(0,102,204,0.12), transparent 50%),
+              var(--bg);
+  border-top: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+.kit-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 56px;
+  align-items: center;
+}
+.kit-showcase {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px;
+  border-radius: 32px;
+  background: linear-gradient(145deg, rgba(20,24,36,0.7), rgba(11,13,18,0.9));
+  border: 1px solid var(--line);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+.kit-glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15), rgba(0,102,204,0.2) 50%, transparent 75%);
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+.kit-img {
+  position: relative;
+  z-index: 1;
+  max-height: 480px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 35px rgba(0,0,0,0.75));
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.kit-showcase:hover .kit-img {
+  transform: translateY(-8px) scale(1.03);
+}
+.kit-tag {
+  position: relative;
+  z-index: 2;
+  margin-top: 24px;
+  font: 700 12px/1 var(--body);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 8px 18px;
+  border-radius: 99px;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--text);
+  backdrop-filter: blur(8px);
+}
+.kit-details h2 {
+  font: 800 clamp(42px, 5.5vw, 68px)/1 var(--display);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+.kit-details .lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+.kit-features {
+  display: grid;
+  gap: 16px;
+}
+.kit-feature {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.kit-feature:hover {
+  transform: translateX(6px);
+  border-color: rgba(225,29,46,0.35);
+  background: rgba(255,255,255,0.04);
+}
+.kf-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line);
+  font-size: 22px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.kit-feature h4 {
+  font: 800 20px/1.2 var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.kit-feature p {
+  font-size: 13.5px;
+  color: var(--dim);
+  line-height: 1.5;
+  margin: 0;
+}
+
 /* EQUIPA */
 .toolbar { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-bottom: 40px; }
 .tabs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; background: rgba(0,0,0,0.3); padding: 6px; border-radius: 99px; border: 1px solid var(--line); }
@@ -146,7 +265,6 @@ ul { list-style: none; }
 .staff-section { margin-top: 72px; padding-top: 48px; border-top: 1px solid var(--line); }
 .staff-title { text-align: center; margin-bottom: 40px; font-size: 32px; }
 .staff-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
-/* Fotografia ocupa o cartão quase todo porque não há número */
 .staff-card .photo img { height: 100%; object-position: center top; width: 100%; } 
 .staff-card .info { margin-top: -48px; padding-bottom: 24px; position: relative; z-index: 3; }
 
@@ -161,11 +279,9 @@ ul { list-style: none; }
 .tbl-team { display: flex; align-items: center; gap: 12px; font-weight: 500;}
 .tbl-team img { width: 28px; height: 28px; object-fit: contain; }
 .pos-num { font-weight: 700; color: var(--dim); }
-/* Status colors */
 .table tr.st-up .pos-num { color: #4caf50; }
 .table tr.st-playoff .pos-num { color: #ff9800; }
 .table tr.st-down .pos-num { color: #f44336; }
-/* Highlight Row */
 .table tr.highlight-row { background: rgba(225, 29, 46, 0.05); position: relative;}
 .table tr.highlight-row td { font-weight: 700; color: #fff;}
 .table tr.highlight-row::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--accent); box-shadow: 0 0 10px var(--accent);}
@@ -213,6 +329,10 @@ ul { list-style: none; }
   .match { grid-template-columns: 1fr; padding: 32px 24px; gap: 24px; text-align: center; }
   .team { flex-direction: column; gap: 12px; }
   .badge { width: 100px; height: 100px; }
+  
+  .kit-wrap { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+  .kit-img { max-height: 380px; }
+  .kit-details { text-align: left; }
   
   .about { grid-template-columns: 1fr; gap: 48px; }
   
